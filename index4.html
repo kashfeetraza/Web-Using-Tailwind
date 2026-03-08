@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>EduAct Education</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-700">
+
+
+<!-- NAVBAR -->
+
+<header class="bg-white shadow-sm">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold text-orange-500">
+eduAct
+</h1>
+
+<nav class="hidden md:flex gap-8 text-gray-600">
+
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Services</a>
+<a href="#">Courses</a>
+<a href="#">Teacher</a>
+<a href="#">Blog</a>
+
+</nav>
+
+<button class="bg-orange-500 text-white px-5 py-2 rounded">
+Get In Touch
+</button>
+
+</div>
+
+</header>
+
+
+
+<!-- HERO -->
+
+<section class="py-16">
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+
+<div>
+
+<p class="text-orange-500 font-semibold mb-4">
+Welcome To
+</p>
+
+<h1 class="text-4xl md:text-5xl font-bold leading-tight mb-6">
+The Beginning Of Our Journey Learning
+</h1>
+
+<p class="text-gray-500 mb-6">
+All the Lorem ipsum generators on the Internet tend to repeat predefined chunks as necessary.
+</p>
+
+<button class="bg-orange-500 text-white px-6 py-3 rounded">
+Find The Course
+</button>
+
+</div>
+
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+class="rounded-lg">
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<!-- ABOUT -->
+
+<section class="py-20 bg-white">
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center">
+
+<div>
+
+<h2 class="text-3xl font-bold mb-4">
+Creating a Lifelong Learning Best Community
+</h2>
+
+<p class="text-gray-500 mb-6">
+Many educational institutions strive to provide learners with meaningful
+learning experiences that last a lifetime.
+</p>
+
+<div class="bg-gray-100 p-5 rounded mb-6">
+
+<h4 class="font-semibold mb-2">
+Flexible Classes
+</h4>
+
+<p class="text-sm text-gray-500">
+Our flexible classes help learners balance study with work and life.
+</p>
+
+</div>
+
+<button class="bg-blue-600 text-white px-6 py-3 rounded">
+Discover More
+</button>
+
+</div>
+
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1580894732444-8ecded7900cd"
+class="rounded-lg">
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- SERVICES -->
+
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-3xl font-bold text-center mb-12">
+Our Services
+</h2>
+
+<div class="grid md:grid-cols-4 gap-8">
+
+<div class="bg-white p-6 rounded shadow text-center">
+
+<div class="text-3xl mb-4">🎓</div>
+
+<h3 class="font-semibold mb-2">
+Exclusive Coach
+</h3>
+
+<p class="text-sm text-gray-500">
+Professional instructors and personalized coaching.
+</p>
+
+</div>
+
+
+<div class="bg-white p-6 rounded shadow text-center">
+
+<div class="text-3xl mb-4">💡</div>
+
+<h3 class="font-semibold mb-2">
+Creative Minds
+</h3>
+
+<p class="text-sm text-gray-500">
+Develop creative thinking and innovative ideas.
+</p>
+
+</div>
+
+
+<div class="bg-white p-6 rounded shadow text-center">
+
+<div class="text-3xl mb-4">📹</div>
+
+<h3 class="font-semibold mb-2">
+Video Tutorials
+</h3>
+
+<p class="text-sm text-gray-500">
+Learn with interactive and engaging video lessons.
+</p>
+
+</div>
+
+
+<div class="bg-white p-6 rounded shadow text-center">
+
+<div class="text-3xl mb-4">📚</div>
+
+<h3 class="font-semibold mb-2">
+Video Tutorials
+</h3>
+
+<p class="text-sm text-gray-500">
+Comprehensive courses covering various topics.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- VIDEO SECTION -->
+
+<section class="bg-indigo-900 text-white py-20 text-center">
+
+<h2 class="text-3xl font-bold mb-4">
+Discover the Campus Through a Video Tour
+</h2>
+
+<button id="playVideo" class="bg-orange-500 px-6 py-3 rounded">
+Discover More
+</button>
+
+</section>
+
+
+
+<!-- VIDEO MODAL -->
+
+<div id="videoModal" class="hidden fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center">
+
+<div class="bg-white p-6 rounded">
+
+<button id="closeVideo" class="mb-3 text-red-500">Close</button>
+
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/ysz5S6PUM-U"
+title="YouTube video"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</div>
+
+
+
+<script>
+
+const modal = document.getElementById("videoModal")
+
+document.getElementById("playVideo").onclick = () =>{
+modal.classList.remove("hidden")
+}
+
+document.getElementById("closeVideo").onclick = () =>{
+modal.classList.add("hidden")
+}
+
+</script>
+
+
+</body>
+</html>
