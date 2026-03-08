@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+      .dark\:bg-gray-800 {
+  @media (prefers-color-scheme: dark) {
+    background-color: var(--color-gray-800);
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h1 class="text-3xl font-bold underline text-clifford">
+      Hello world!
+    </h1>
+
+    <div class="mx-auto flex max-w-sm items-center gap-x-4 rounded-xl bg-white p-6 shadow-lg outline outline-black/5 dark:bg-slate-800 dark:shadow-none dark:-outline-offset-1 dark:outline-white/10">
+  <img class="size-12 shrink-0" src="data:image/webp;base64,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" alt="ChitChat Logo" />
+  <div>
+    <div class="text-xl font-medium text-black dark:text-white">ChitChat</div>
+    <p class="text-gray-500 dark:text-gray-400">You have a new message!</p>
+  </div>
+</div>
+
+<div class="flex flex-col gap-2 p-8 sm:flex-row sm:items-center sm:gap-6 sm:py-4 ...">
+  <img class="mx-auto block h-24 rounded-full sm:mx-0 sm:shrink-0" src="https://img.freepik.com/free-photo/young-beautiful-girl-posing-black-leather-jacket-park_1153-8104.jpg?semt=ais_user_personalization&w=740&q=80" alt="" />
+  <div class="space-y-2 text-center sm:text-left">
+    <div class="space-y-0.5">
+      <p class="text-lg font-semibold text-black">Erin Lindford</p>
+      <p class="font-medium text-gray-500">Product Engineer</p>
+    </div>
+    <button class="border-purple-200 text-purple-600 hover:border-transparent hover:bg-purple-600 hover:text-white active:bg-purple-700 ...">
+      Message
+    </button>
+  </div>
+</div>
+
+<button class="bg-sky-500 hover:bg-sky-700 rounded-full text-xl text-white p-4 mx-10">Save changes</button>
+
+    <div class="bg-white dark:bg-gray-800 rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
+  <div>
+    <span class="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
+      <svg
+  class="h-6 w-6 text-white"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  aria-hidden="true"
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M6 18L18 6M6 6l12 12"
+  />
+</svg>
+<svg
+  class="h-6 w-6 text-white"
+  fill="none"
+  viewBox="0 0 24 24"
+  stroke="currentColor"
+  aria-hidden="true"
+>
+  <path
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-width="2"
+    d="M21 21l-4.35-4.35m1.85-5.15a7 7 0 11-14 0 7 7 0 0114 0z"
+  />
+</svg>
+    </span>
+  </div>
+  <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Writes upside-down</h3>
+  <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
+    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+  </p>
+</div>
+
+ <img class="aspect-3/2 object-cover ..." src="https://img.freepik.com/free-photo/young-beautiful-girl-posing-black-leather-jacket-park_1153-8104.jpg?semt=ais_user_personalization&w=740&q=80" />
+
+ <p class="whitespace-normal">Hey everyone!
+It's almost 2022       and we still don't know if there             are aliens living among us, or do we? Maybe the person writing this is an alien.
+You will never know.</p>
+
+<p class="overflow-auto whitespace-nowrap">Hey everyone!
+It's almost 2022       and we still don't know if there             are aliens living among us, or do we? Maybe the person writing this is an alien.
+You will never know.</p>
+
+
+<button class="bg-sky-500/100 ...">1-Button</button>
+<button class="bg-sky-500/75 ...">2-Button</button>
+<button class="bg-sky-500/50 ...">3-Button</button>
+
+  </body>
+</html>
