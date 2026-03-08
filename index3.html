@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Jobbe - Job Listing</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="bg-gray-50 font-sans text-gray-700">
+
+
+<!-- NAVBAR -->
+
+<header class="bg-white shadow-sm">
+
+<div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+<h1 class="text-2xl font-bold text-green-600">
+Jobbe
+</h1>
+
+<nav class="hidden md:flex gap-8 text-gray-600">
+
+<a href="#">Home</a>
+<a href="#">About us</a>
+<a href="#">Job List</a>
+<a href="#">Contact</a>
+<a href="#">Pages</a>
+
+</nav>
+
+<button class="bg-green-600 text-white px-5 py-2 rounded">
+Post a Job
+</button>
+
+</div>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="py-16">
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
+
+<div>
+
+<p class="text-green-600 text-sm mb-3">
+LET'S START YOUR CAREERS HERE
+</p>
+
+<h1 class="text-4xl font-bold leading-tight mb-5">
+Looking for a career change?
+Browse our job listings now!
+</h1>
+
+<p class="mb-6 text-gray-500">
+Mus vehicula dignissim quis lorem libero cras pulvinar orci dapibus.
+</p>
+
+<div class="flex items-center gap-4 mb-6">
+
+<img src="https://randomuser.me/api/portraits/women/1.jpg" class="w-8 h-8 rounded-full">
+<img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-8 h-8 rounded-full">
+<img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-8 h-8 rounded-full">
+<img src="https://randomuser.me/api/portraits/men/4.jpg" class="w-8 h-8 rounded-full">
+
+<span class="text-sm text-gray-500">
+540K+ Member Active
+</span>
+
+</div>
+
+<button class="bg-green-600 text-white px-6 py-3 rounded">
+Browse Job
+</button>
+
+</div>
+
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1560250097-0b93528c311a"
+class="rounded-lg">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="max-w-7xl mx-auto px-6 -mt-10">
+
+<div class="grid md:grid-cols-3 gap-6">
+
+<div class="bg-white p-8 rounded-lg shadow text-center">
+
+<h3 class="font-semibold text-lg mb-2">
+Talents Agency
+</h3>
+
+<p class="text-gray-500 text-sm">
+Facilit etiam consectetur mi nibh bibendum posuere.
+</p>
+
+</div>
+
+
+<div class="bg-green-600 text-white p-8 rounded-lg shadow text-center">
+
+<h3 class="font-semibold text-lg mb-2">
+Portal Job
+</h3>
+
+<p class="text-green-100 text-sm">
+Facilit etiam consectetur mi nibh bibendum posuere.
+</p>
+
+</div>
+
+
+<div class="bg-white p-8 rounded-lg shadow text-center">
+
+<h3 class="font-semibold text-lg mb-2">
+Careers Coaching
+</h3>
+
+<p class="text-gray-500 text-sm">
+Facilit etiam consectetur mi nibh bibendum posuere.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="py-20">
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1"
+class="rounded-lg">
+
+</div>
+
+
+<div>
+
+<h4 class="text-green-600 mb-3">
+OUR SERVICE
+</h4>
+
+<h2 class="text-3xl font-bold mb-4">
+Bridge for industrial and corporate development.
+</h2>
+
+<p class="text-gray-500 mb-6">
+Donec class lacinia vel hac laoreet amet et dictumst
+suspendisse. Maximus tortor pede egestas quis facilisis.
+</p>
+
+<button class="bg-green-600 text-white px-6 py-3 rounded">
+Discover More
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JOB LIST -->
+
+<section class="py-10">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<h2 class="text-3xl font-bold text-center mb-10">
+Latest Job Listing
+</h2>
+
+<div id="jobs" class="grid md:grid-cols-3 gap-8"></div>
+
+</div>
+
+</section>
+
+
+<script>
+
+
+const jobs = [
+
+{
+company:"FoxHub Studios",
+title:"IT Support Associate",
+salary:"$20k - $25k"
+},
+
+{
+company:"Treva Agency",
+title:"Android Developer",
+salary:"$20k - $25k"
+},
+
+{
+company:"Muzica Studio",
+title:"Senior Manager",
+salary:"$20k - $25k"
+},
+
+{
+company:"Earth Community",
+title:"Web Developer",
+salary:"$20k - $25k"
+},
+
+{
+company:"Atica Ltd",
+title:"Digital Marketer",
+salary:"$20k - $25k"
+},
+
+{
+company:"Fossa News",
+title:"UI/UX Designer",
+salary:"$20k - $25k"
+}
+
+]
+
+const container = document.getElementById("jobs")
+
+jobs.forEach(job => {
+
+container.innerHTML += `
+
+<div class="bg-white p-6 rounded-lg shadow">
+
+<p class="text-green-600 text-sm mb-2">
+Verified Company
+</p>
+
+<h3 class="font-semibold text-lg mb-1">
+${job.company}
+</h3>
+
+<p class="text-gray-600 mb-3">
+${job.title}
+</p>
+
+<div class="flex justify-between items-center">
+
+<span class="text-sm text-gray-500">
+${job.salary}
+</span>
+
+<button class="bg-green-600 text-white px-4 py-2 rounded text-sm">
+Apply Now
+</button>
+
+</div>
+
+</div>
+
+`
+
+})
+
+</script>
+
+
+</body>
+</html>
