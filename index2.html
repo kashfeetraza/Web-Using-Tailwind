@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Biru Tech</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body class="font-sans text-gray-700">
+
+<!-- NAVBAR -->
+
+<header class="absolute w-full z-10">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+
+<h1 class="text-white text-2xl font-bold">biru</h1>
+
+<nav class="hidden md:flex gap-8 text-white">
+
+<a href="#">Home</a>
+<a href="#">About us</a>
+<a href="#">Services</a>
+<a href="#">Contact us</a>
+<a href="#">Pages</a>
+
+</nav>
+
+<button class="bg-cyan-400 text-white px-5 py-2 rounded-md">
+Get Started
+</button>
+
+</div>
+</header>
+
+<!-- HERO -->
+
+<section class="bg-indigo-800 pt-32 pb-28">
+
+<div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 items-center gap-10">
+
+<div class="text-white">
+
+<p class="uppercase text-sm mb-4">Welcome to Biru</p>
+
+<h1 class="text-5xl font-bold leading-tight mb-6">
+We solve business problems with technology.
+</h1>
+
+<p class="mb-8 text-gray-200">
+Our performance is your success. Our passion is innovation.
+Our expertise is unmatched. We get you more.
+</p>
+
+<div class="flex gap-4">
+
+<button class="bg-cyan-400 px-6 py-3 rounded text-white">
+Get Started
+</button>
+
+<button class="border border-white px-6 py-3 rounded">
+View Case Study
+</button>
+
+</div>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1603415526960-f7e0328f4b1c"
+class="rounded-lg">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section class="max-w-7xl mx-auto px-6 -mt-16 relative z-10">
+
+<div class="grid md:grid-cols-3 gap-8">
+
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+
+<div class="text-3xl mb-4">💻</div>
+
+<h3 class="font-semibold text-lg mb-2">
+Software Services
+</h3>
+
+<p class="text-sm mb-4">
+Quisque neque mus si dapibus egestas platea sagittis fames nunc.
+</p>
+
+<button class="bg-indigo-700 text-white px-5 py-2 rounded">
+Learn more
+</button>
+
+</div>
+
+
+<div class="bg-white p-8 rounded-lg shadow-xl text-center scale-105">
+
+<div class="text-3xl mb-4">☁️</div>
+
+<h3 class="font-semibold text-lg mb-2">
+Cloud Services
+</h3>
+
+<p class="text-sm mb-4">
+Quisque neque mus si dapibus egestas platea sagittis fames nunc.
+</p>
+
+<button class="bg-indigo-700 text-white px-5 py-2 rounded">
+Learn more
+</button>
+
+</div>
+
+
+<div class="bg-white p-8 rounded-lg shadow-lg text-center">
+
+<div class="text-3xl mb-4">🔒</div>
+
+<h3 class="font-semibold text-lg mb-2">
+Security services
+</h3>
+
+<p class="text-sm mb-4">
+Quisque neque mus si dapibus egestas platea sagittis fames nunc.
+</p>
+
+<button class="bg-indigo-700 text-white px-5 py-2 rounded">
+Learn more
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CLIENTS -->
+
+<section class="text-center py-20">
+
+<h2 class="text-2xl font-semibold mb-8">
+Join our 30,000 happy customers
+</h2>
+
+<div class="flex justify-center flex-wrap gap-10 opacity-70">
+
+<img src="https://dummyimage.com/100x40/ddd/aaa.png&text=logo">
+<img src="https://dummyimage.com/100x40/ddd/aaa.png&text=logo">
+<img src="https://dummyimage.com/100x40/ddd/aaa.png&text=logo">
+<img src="https://dummyimage.com/100x40/ddd/aaa.png&text=logo">
+<img src="https://dummyimage.com/100x40/ddd/aaa.png&text=logo">
+
+</div>
+
+</section>
+
+
+<!-- FEATURE -->
+
+<section class="max-w-7xl mx-auto px-6 pb-20 grid md:grid-cols-2 gap-10 items-center">
+
+<div>
+
+<h2 class="text-4xl font-bold mb-6">
+Let us do the work,
+so you can focus on what matters.
+</h2>
+
+<p class="mb-6">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Ut elit tellus, luctus nec ullamcorper mattis.
+</p>
+
+<button class="bg-indigo-700 text-white px-6 py-3 rounded">
+Learn more
+</button>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+class="rounded-lg">
+
+</div>
+
+</section>
+
+
+<script>
+
+// simple button interaction
+
+document.querySelectorAll("button").forEach(btn=>{
+btn.addEventListener("mouseover",()=>{
+btn.classList.add("scale-105")
+})
+btn.addEventListener("mouseout",()=>{
+btn.classList.remove("scale-105")
+})
+})
+
+</script>
+
+</body>
+</html>
