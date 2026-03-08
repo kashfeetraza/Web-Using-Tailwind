@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSPLUS GmbH - Corporate Software</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                dark: '#071a34',
+                navy: '#0a2347',
+                blue: '#38bdf8',
+                cyan: '#67e8f9',
+                soft: '#eaf7ff'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif']
+            },
+            boxShadow: {
+              glow: '0 0 0 1px rgba(103,232,249,0.35), 0 18px 40px rgba(7,26,52,0.25)'
+            },
+            backgroundImage: {
+              hero: "linear-gradient(90deg, rgba(4,16,35,.92) 0%, rgba(4,16,35,.78) 35%, rgba(4,16,35,.45) 60%, rgba(4,16,35,.82) 100%), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80')",
+              sectionDark: "linear-gradient(90deg, rgba(4,16,35,.92), rgba(4,16,35,.84)), url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80')",
+              contact: "linear-gradient(90deg, rgba(4,16,35,.90), rgba(7,26,52,.75)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80')"
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      .glass { backdrop-filter: blur(8px); }
+    </style>
+  </head>
+  <body class="bg-white text-slate-800">
+    <header class="fixed inset-x-0 top-0 z-50">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+        <a href="#home" class="glass flex items-center gap-3 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-white shadow-glow">
+          <span class="flex h-11 w-11 items-center justify-center rounded-md border border-cyan-300/60 text-lg font-bold tracking-widest text-cyan-200">CS</span>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.35em] text-cyan-100">CSPLUS</p>
+            <p class="text-[11px] text-white/70">Corporate Software</p>
+          </div>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm text-white/85 lg:flex">
+          <a href="#home" class="transition hover:text-cyan-300">Home</a>
+          <a href="#about" class="transition hover:text-cyan-300">Subject Areas</a>
+          <a href="#projects" class="transition hover:text-cyan-300">Projects</a>
+          <a href="#software" class="transition hover:text-cyan-300">Software</a>
+          <a href="#team" class="transition hover:text-cyan-300">Team</a>
+          <a href="#contact" class="transition hover:text-cyan-300">Contact</a>
+        </nav>
+
+        <div class="hidden items-center gap-3 lg:flex">
+          <button class="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-sm text-white transition hover:bg-white/20">Search</button>
+          <button class="rounded-full bg-sky-400 px-5 py-2 text-sm font-semibold text-slate-950 transition hover:bg-sky-300">Log In</button>
+        </div>
+
+        <button id="menuBtn" class="rounded-lg border border-white/15 bg-white/10 p-3 text-white lg:hidden" aria-label="Toggle menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+      <div id="mobileMenu" class="mx-4 hidden rounded-3xl border border-white/15 bg-slate-950/90 p-5 text-white shadow-2xl lg:hidden">
+        <div class="flex flex-col gap-4 text-sm">
+          <a href="#home" class="mobile-link">Home</a>
+          <a href="#about" class="mobile-link">Subject Areas</a>
+          <a href="#projects" class="mobile-link">Projects</a>
+          <a href="#software" class="mobile-link">Software</a>
+          <a href="#team" class="mobile-link">Team</a>
+          <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="relative isolate overflow-hidden bg-brand-dark bg-hero bg-cover bg-center pt-32 text-white">
+        <div class="absolute inset-y-0 left-5 hidden w-16 flex-col items-center justify-center gap-4 lg:flex">
+          <span class="-rotate-90 text-xs uppercase tracking-[0.45em] text-white/50">CCH Tagetik</span>
+          <div class="h-24 w-px bg-white/20"></div>
+          <span class="-rotate-90 text-[10px] uppercase tracking-[0.45em] text-white/40">scroll</span>
+          <div class="flex flex-col gap-3 pt-10">
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs text-white/70 hover:border-cyan-300 hover:text-cyan-300">f</a>
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs text-white/70 hover:border-cyan-300 hover:text-cyan-300">in</a>
+            <a href="#" class="flex h-8 w-8 items-center justify-center rounded-full border border-white/20 text-xs text-white/70 hover:border-cyan-300 hover:text-cyan-300">t</a>
+          </div>
+        </div>
+
+        <div class="mx-auto grid min-h-[92vh] max-w-7xl items-center gap-10 px-6 pb-20 pt-10 lg:grid-cols-[1.05fr_.95fr] lg:px-8 lg:pb-28">
+          <div class="relative max-w-2xl">
+            <div class="absolute -left-4 top-6 hidden h-52 w-52 border border-cyan-400/50 lg:block"></div>
+            <div class="absolute -left-8 top-0 hidden h-24 w-px bg-cyan-400/60 lg:block"></div>
+            <p class="mb-5 text-xs font-semibold uppercase tracking-[0.55em] text-cyan-300">CSPLUS GmbH</p>
+            <h1 class="max-w-xl text-5xl font-black uppercase leading-[0.92] tracking-tight sm:text-6xl lg:text-7xl">
+              We Implement <span class="block text-white/90">Corporate Software</span>
+            </h1>
+            <p class="mt-6 max-w-lg text-sm leading-7 text-white/75 sm:text-base">
+              We implement corporate performance software, CCH Tagetik for consolidation, planning, and reporting purposes.
+            </p>
+            <div class="mt-8 flex flex-wrap gap-4">
+              <a href="#contact" class="inline-flex items-center gap-3 rounded-full bg-sky-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300">
+                Get Started Now
+                <span class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-950/15">→</span>
+              </a>
+              <a href="#about" class="inline-flex items-center gap-3 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-300 hover:text-cyan-300">
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="hidden justify-end lg:flex">
+            <div class="glass rounded-[2rem] border border-white/10 bg-white/5 p-5 shadow-2xl">
+              <div class="grid w-[420px] gap-4 rounded-[1.5rem] border border-white/10 bg-slate-950/35 p-4">
+                <div class="rounded-[1.25rem] border border-cyan-400/20 bg-white/5 p-4">
+                  <div class="mb-3 flex items-center justify-between">
+                    <span class="text-sm font-semibold text-cyan-200">Project Snapshot</span>
+                    <span class="rounded-full bg-emerald-400/15 px-3 py-1 text-xs text-emerald-300">Live</span>
+                  </div>
+                  <div class="space-y-3 text-sm text-white/70">
+                    <div class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3"><span>Consolidation</span><span>94%</span></div>
+                    <div class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3"><span>Planning</span><span>87%</span></div>
+                    <div class="flex items-center justify-between rounded-xl bg-white/5 px-4 py-3"><span>Reporting</span><span>91%</span></div>
+                  </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="rounded-[1.25rem] border border-white/10 bg-white/5 p-4">
+                    <p class="text-xs uppercase tracking-[0.3em] text-white/45">Clients</p>
+                    <p class="mt-3 text-3xl font-bold">120+</p>
+                  </div>
+                  <div class="rounded-[1.25rem] border border-white/10 bg-white/5 p-4">
+                    <p class="text-xs uppercase tracking-[0.3em] text-white/45">Projects</p>
+                    <p class="mt-3 text-3xl font-bold">240</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="relative overflow-hidden bg-white py-24">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.05),transparent_42%)]"></div>
+        <div class="mx-auto grid max-w-7xl items-center gap-14 px-6 lg:grid-cols-[.95fr_1.05fr] lg:px-8">
+          <div class="relative mx-auto w-full max-w-xl">
+            <div class="absolute left-6 top-4 h-44 w-52 rounded-md border border-rose-300"></div>
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="Office analytics" class="relative z-10 ml-12 mt-14 h-72 w-72 object-cover shadow-2xl" />
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=600&q=80" alt="Team meeting" class="absolute left-0 top-0 z-20 h-32 w-48 border-8 border-white object-cover shadow-xl" />
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=700&q=80" alt="Working team" class="absolute bottom-0 left-10 z-0 h-40 w-56 border-8 border-white object-cover shadow-xl" />
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.45em] text-cyan-600">Our Story</p>
+            <h2 class="mt-3 text-4xl font-black uppercase leading-tight text-slate-900 sm:text-5xl">
+              About CSPLUS <span class="font-light text-slate-500">GmbH</span>
+            </h2>
+            <p class="mt-6 text-base leading-8 text-slate-600">
+              We are specialists in financial planning and reporting. With extensive know-how, we support the finance department of your company with the introduction and expansion of a CCH Tagetik solution for your corporate performance management, in addition to Sturmis365 as offer a software solution for publishing the creation of annual reports.
+            </p>
+            <p class="mt-4 text-base leading-8 text-slate-600">
+              Our team manages complex projects with a focus on successful implementation and measurable process improvement. We aim to deliver custom solutions with a proactive and solution-oriented way of working.
+            </p>
+            <a href="#services" class="mt-8 inline-flex items-center gap-3 rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600">
+              Learn More Now <span class="flex h-7 w-7 items-center justify-center rounded-full bg-white/20">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="bg-slate-50 py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.45em] text-cyan-600">CSPLUS GmbH</p>
+            <h2 class="mt-3 text-4xl font-black uppercase text-slate-900 sm:text-5xl">Services</h2>
+            <p class="mt-4 text-slate-500">Services that we provide to you.</p>
+          </div>
+          <div class="mt-16 grid gap-8 lg:grid-cols-3">
+            <article class="rounded-[2rem] bg-white p-8 text-center shadow-lg shadow-slate-200/60">
+              <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-cyan-200 bg-cyan-50 text-4xl">📊</div>
+              <h3 class="mt-6 text-2xl font-bold text-slate-900">The IFRS16 Lease Accounting</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-600">We would also be happy to assist you with the IFRS16-compliant mapping of your leasing contracts. The successful introduction of the Tagetik IFRS16 Lease Accounting Solution can help companies in the DACH region demonstrate expertise in the technical introduction of the accounting standard.</p>
+            </article>
+            <article class="rounded-[2rem] bg-white p-8 text-center shadow-lg shadow-slate-200/60">
+              <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-cyan-200 bg-cyan-50 text-4xl">🧮</div>
+              <h3 class="mt-6 text-2xl font-bold text-slate-900">Integrated Financial Planning</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-600">As professionals for integrated financial planning, we support you in the design, implementation and roll-out of your CCH Tagetik planning solution. We help with the design of your strategic and operational planning processes and optimize implementation scenarios.</p>
+            </article>
+            <article class="rounded-[2rem] bg-white p-8 text-center shadow-lg shadow-slate-200/60">
+              <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-cyan-200 bg-cyan-50 text-4xl">📋</div>
+              <h3 class="mt-6 text-2xl font-bold text-slate-900">Creating Annual Reports</h3>
+              <p class="mt-4 text-sm leading-7 text-slate-600">Annual report creation can be automated through the use of Sturmis365 Document Management, a PDF-system-independent solution for optimizing and simplifying the report creation process.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="bg-sectionDark bg-cover bg-center py-24 text-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.45em] text-cyan-300">CSPLUS GmbH</p>
+            <h2 class="mt-3 text-4xl font-black uppercase sm:text-5xl">What Concerns Us</h2>
+            <p class="mt-4 text-sm leading-7 text-white/70">There are a number of topics and terms related to our service portfolio that concern us. We look forward to discovering something interesting for you in our subject areas.</p>
+          </div>
+
+          <div class="relative mt-16">
+            <div class="overflow-hidden" id="carouselViewport">
+              <div id="carouselTrack" class="flex transition-transform duration-500 ease-out">
+                <div class="min-w-full px-2 md:min-w-[50%] lg:min-w-[33.3333%]">
+                  <article class="h-full rounded-[1.75rem] border border-cyan-400/30 bg-indigo-950/45 p-7 shadow-xl backdrop-blur-sm">
+                    <p class="text-xs uppercase tracking-[0.35em] text-cyan-300">Data</p>
+                    <h3 class="mt-4 text-3xl font-bold">iXBRL 2020</h3>
+                    <p class="mt-4 text-sm leading-7 text-white/75">From 2020, IFRS annual reports must be reported in iXBRL format. Our team supports the migration and process setup for structured digital reporting.</p>
+                    <button class="mt-6 text-sm font-semibold text-cyan-300">Read More</button>
+                  </article>
+                </div>
+                <div class="min-w-full px-2 md:min-w-[50%] lg:min-w-[33.3333%]">
+                  <article class="h-full rounded-[1.75rem] border border-cyan-400/30 bg-indigo-950/45 p-7 shadow-xl backdrop-blur-sm">
+                    <p class="text-xs uppercase tracking-[0.35em] text-cyan-300">Planning</p>
+                    <h3 class="mt-4 text-3xl font-bold">Forecasting</h3>
+                    <p class="mt-4 text-sm leading-7 text-white/75">Forecasts close the gap between budget planning and current company development. They support fast reaction to short-term business developments.</p>
+                    <button class="mt-6 text-sm font-semibold text-cyan-300">Read More</button>
+                  </article>
+                </div>
+                <div class="min-w-full px-2 md:min-w-[50%] lg:min-w-[33.3333%]">
+                  <article class="h-full rounded-[1.75rem] border border-cyan-400/30 bg-indigo-950/45 p-7 shadow-xl backdrop-blur-sm">
+                    <p class="text-xs uppercase tracking-[0.35em] text-cyan-300">Analysis</p>
+                    <h3 class="mt-4 text-3xl font-bold">Budgeting</h3>
+                    <p class="mt-4 text-sm leading-7 text-white/75">We have dealt with the tools and methods of corporate planning and budgeting requirements for decades. There are numerous tools to consider when choosing a suitable solution.</p>
+                    <button class="mt-6 text-sm font-semibold text-cyan-300">Read More</button>
+                  </article>
+                </div>
+                <div class="min-w-full px-2 md:min-w-[50%] lg:min-w-[33.3333%]">
+                  <article class="h-full rounded-[1.75rem] border border-cyan-400/30 bg-indigo-950/45 p-7 shadow-xl backdrop-blur-sm">
+                    <p class="text-xs uppercase tracking-[0.35em] text-cyan-300">Compliance</p>
+                    <h3 class="mt-4 text-3xl font-bold">Consolidation</h3>
+                    <p class="mt-4 text-sm leading-7 text-white/75">Create transparent group-wide closing processes with connected data, automated validation rules, and reliable management reporting.</p>
+                    <button class="mt-6 text-sm font-semibold text-cyan-300">Read More</button>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <button id="prevBtn" class="absolute -left-2 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-3 text-white backdrop-blur-md lg:flex">←</button>
+            <button id="nextBtn" class="absolute -right-2 top-1/2 hidden -translate-y-1/2 rounded-full border border-white/20 bg-white/10 p-3 text-white backdrop-blur-md lg:flex">→</button>
+
+            <div id="dots" class="mt-8 flex items-center justify-center gap-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="software" class="bg-white py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-8">
+          <div class="mx-auto max-w-3xl text-center">
+            <p class="text-xs font-semibold uppercase tracking-[0.45em] text-cyan-600">CSPLUS GmbH</p>
+            <h2 class="mt-3 text-4xl font-black uppercase text-slate-900 sm:text-5xl">The Right Software</h2>
+            <p class="mt-4 text-slate-500">Software that we provide to you.</p>
+          </div>
+
+          <div class="mt-16 space-y-20">
+            <div class="grid items-center gap-10 lg:grid-cols-[.9fr_1.1fr]">
+              <div class="relative">
+                <div class="absolute left-10 top-6 h-full w-full rounded-xl border border-rose-300"></div>
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="CCH Tagetik" class="relative z-10 h-80 w-full rounded-xl object-cover shadow-2xl" />
+              </div>
+              <div>
+                <h3 class="text-4xl font-black text-slate-900">CCH Tagetik</h3>
+                <p class="mt-5 text-base leading-8 text-slate-600">CCH Tagetik is a process performance management software for the Office of Finance. Its integrated financial planning, budgeting, forecasting, consolidation and reporting are connected in one mapped platform with CCH Tagetik. Your financial processes can be mapped from operational planning to external reporting with one software solution.</p>
+                <button class="mt-7 rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600">Read More</button>
+              </div>
+            </div>
+
+            <div class="grid items-center gap-10 lg:grid-cols-[1.1fr_.9fr]">
+              <div class="order-2 lg:order-1">
+                <h3 class="text-4xl font-black text-slate-900">Sturmis365</h3>
+                <p class="mt-5 text-base leading-8 text-slate-600">The corporate disclosure software solution for your annual reports, financial and sustainability reports, Sturmis365 is a state-of-the-art software tool to streamline report generation. The software enables pre-system-independent, dynamic integration of business figures into your Word and PowerPoint reports.</p>
+                <button class="mt-7 rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white transition hover:bg-sky-600">Read More</button>
+              </div>
+              <div class="order-1 lg:order-2 relative">
+                <div class="absolute right-10 top-6 h-full w-full rounded-xl border border-rose-300"></div>
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80" alt="Sturmis365" class="relative z-10 h-80 w-full rounded-xl object-cover shadow-2xl" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="bg-contact bg-cover bg-center py-24 text-white">
+        <div class="mx-auto grid max-w-7xl items-center gap-12 px-6 lg:grid-cols-[1fr_.95fr] lg:px-8">
+          <div>
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80" alt="Meeting" class="hidden h-80 w-full rounded-[2rem] object-cover shadow-2xl lg:block" />
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.45em] text-cyan-300">CSPLUS GmbH</p>
+            <h2 class="mt-3 text-4xl font-black uppercase sm:text-5xl">Contact Us Today!</h2>
+            <p class="mt-5 max-w-xl text-base leading-8 text-white/75">Get in touch with us if you want to optimize your controlling and accounting processes with system support. We would be happy to present our solution portfolio to you and support you as a partner in the design and implementation.</p>
+            <a href="#footer" class="mt-8 inline-flex items-center gap-3 rounded-full bg-sky-400 px-6 py-3 text-sm font-semibold text-slate-950 transition hover:bg-sky-300">
+              Contact Us Now <span class="flex h-7 w-7 items-center justify-center rounded-full bg-slate-950/10">→</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="bg-slate-50 py-16">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 lg:grid-cols-[1.2fr_.8fr_.8fr_.9fr_.9fr] lg:px-8">
+        <div>
+          <div class="flex items-center gap-3">
+            <span class="flex h-14 w-14 items-center justify-center rounded-md border border-cyan-500 text-lg font-bold tracking-widest text-cyan-700">CS</span>
+            <div>
+              <p class="text-lg font-bold tracking-[0.3em] text-slate-800">CSPLUS</p>
+              <p class="text-sm text-slate-500">Corporate performance software</p>
+            </div>
+          </div>
+          <p class="mt-5 max-w-xs text-sm leading-7 text-slate-600">We implement the corporate performance software “CCH Tagetik” for consolidation, planning and reporting purposes.</p>
+          <div class="mt-6 flex gap-3">
+            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full bg-cyan-500 text-white">f</a>
+            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-600">t</a>
+            <a href="#" class="flex h-10 w-10 items-center justify-center rounded-full border border-slate-300 text-slate-600">in</a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Home</h3>
+          <ul class="mt-5 space-y-3 text-sm text-slate-600">
+            <li><a href="#home" class="hover:text-sky-600">Home</a></li>
+            <li><a href="#about" class="hover:text-sky-600">About Us</a></li>
+            <li><a href="#services" class="hover:text-sky-600">Services</a></li>
+            <li><a href="#projects" class="hover:text-sky-600">Blogs</a></li>
+            <li><a href="#contact" class="hover:text-sky-600">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Services</h3>
+          <ul class="mt-5 space-y-3 text-sm text-slate-600">
+            <li><a href="#services" class="hover:text-sky-600">Building Apps</a></li>
+            <li><a href="#software" class="hover:text-sky-600">UI Design</a></li>
+            <li><a href="#software" class="hover:text-sky-600">Digital Product</a></li>
+            <li><a href="#contact" class="hover:text-sky-600">Other...</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Quick Links</h3>
+          <ul class="mt-5 space-y-3 text-sm text-slate-600">
+            <li><a href="#" class="hover:text-sky-600">Terms &amp; Conditions</a></li>
+            <li><a href="#" class="hover:text-sky-600">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-sky-600">Help Center</a></li>
+            <li><a href="#contact" class="hover:text-sky-600">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold text-slate-900">Contact Us</h3>
+          <ul class="mt-5 space-y-4 text-sm text-slate-600">
+            <li><span class="font-semibold text-slate-800">Call Us:</span> (020) 200-0898</li>
+            <li><span class="font-semibold text-slate-800">Email Us:</span> info@csplus.example</li>
+            <li><span class="font-semibold text-slate-800">Address:</span> Wakerbrechen 12, 0172 Oslo</li>
+          </ul>
+        </div>
+      </div>
+      <div class="mx-auto mt-12 max-w-7xl border-t border-slate-200 px-6 pt-6 text-center text-sm text-slate-500 lg:px-8">Copyright © CSplus GmbH 2026. All rights reserved.</div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileLinks = document.querySelectorAll('.mobile-link');
+      menuBtn?.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+      mobileLinks.forEach((link) => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+      const track = document.getElementById('carouselTrack');
+      const dots = document.getElementById('dots');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const cards = track ? Array.from(track.children) : [];
+      let index = 0;
+
+      function cardsPerView() {
+        if (window.innerWidth >= 1024) return 3;
+        if (window.innerWidth >= 768) return 2;
+        return 1;
+      }
+
+      function maxIndex() {
+        return Math.max(0, cards.length - cardsPerView());
+      }
+
+      function renderDots() {
+        const total = maxIndex() + 1;
+        dots.innerHTML = '';
+        for (let i = 0; i < total; i++) {
+          const dot = document.createElement('button');
+          dot.className = `h-2.5 rounded-full transition ${i === index ? 'w-8 bg-cyan-300' : 'w-2.5 bg-white/35'}`;
+          dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+          dot.addEventListener('click', () => {
+            index = i;
+            updateCarousel();
+          });
+          dots.appendChild(dot);
+        }
+      }
+
+      function updateCarousel() {
+        const percentage = 100 / cardsPerView();
+        track.style.transform = `translateX(-${index * percentage}%)`;
+        renderDots();
+      }
+
+      prevBtn?.addEventListener('click', () => {
+        index = index <= 0 ? maxIndex() : index - 1;
+        updateCarousel();
+      });
+
+      nextBtn?.addEventListener('click', () => {
+        index = index >= maxIndex() ? 0 : index + 1;
+        updateCarousel();
+      });
+
+      window.addEventListener('resize', () => {
+        index = Math.min(index, maxIndex());
+        updateCarousel();
+      });
+
+      updateCarousel();
+    </script>
+  </body>
+</html>
